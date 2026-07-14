@@ -1,0 +1,14 @@
+# Rojo build output
+*.rbxl
+*.rbxlx
+*.rbxm
+*.rbxmx
+*.rbxl.lock
+*.rbxlx.lock
+
+# Luau LSP / tooling
+sourcemap.json
+
+# Editors
+.vs/
+.vscode/

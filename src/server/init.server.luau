@@ -1,0 +1,20 @@
+local LobbyBuilder = require(script.LobbyBuilder)
+local MapBuilder = require(script.MapBuilder)
+local PlayerData = require(script.PlayerData)
+local Ragdoll = require(script.Ragdoll)
+local CombatService = require(script.CombatService)
+local JoinService = require(script.JoinService)
+local DeathTracker = require(script.DeathTracker)
+local WeaponService = require(script.WeaponService)
+
+local lobby = LobbyBuilder.build()
+local _map, spawnPads = MapBuilder.build()
+
+PlayerData.init()
+Ragdoll.init()
+CombatService.init()
+JoinService.init(spawnPads)
+DeathTracker.init()
+WeaponService.init(lobby)
+
+print("[server] prelobby + map + weapons ready")
